@@ -15,12 +15,15 @@ public class NoProduto {
     public void setProximo(NoProduto novoProximo){
         this.proximo = novoProximo;
     }
+
     public void setAnterior(NoProduto novoAnterior){
         this.anterior = novoAnterior;
     }
+
     public NoProduto getProximo(){
         return this.proximo;
     }
+    
     public NoProduto getAnterior(){
         return this.anterior;
     }
