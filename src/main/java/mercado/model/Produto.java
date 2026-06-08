@@ -1,45 +1,76 @@
 package main.java.mercado.model;
 
+import javax.swing.*;//aqui só serve para mexer na parte das imagens dos produtos.
+
+//IMPORTANTES OBSERVAÇÕES:
+
+//Cada arquivo da imagem do produto deve ter a seguinte descrição (para poder fazer um espécie de automação depois):
+//imagens/categoria/produto.png.
+
 public class Produto {
+
+    private JLabel image;//aqui ele terá a imagem em si.
     private String nome;
     private double preco;
-    private String imagem;
+    private String imagem;//aqui ele terá o caminho da imagem.
     private int quantidade;
     private double demanda;
+    private String categoria;//"setar" a categoria para poder navegar melhpr depois.
 
     //Construtor da clase
-    public Produto(String nome, double preco, String imagem, int quantidade, double demanda) {
+    public Produto(String nome, double preco, String imagem, int quantidade, double demanda, String categoria) {
         this.nome = nome;
         this.preco = preco;
         this.imagem = imagem;
         this.quantidade = quantidade;
         this.demanda = demanda;
+        this.categoria = categoria;
+        ImageIcon img = new ImageIcon(imagem);//vai atrás da imagem no caminho descrito.
+        this.image = new JLabel(img);//cria o Jlabel com a imagem encontrada no caminho.
+
     }
 
     //Getters and Setters
+
+
     public String getNome() {
-        return nome;
+        return nome;//retorna o nome do item.
     }
+
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nome = nome;//"seta" o nome do item.
     }
+
     public double getPreco() {
-        return preco;
+        return preco;//retorna o preço do item.
     }
+
     public void setPreco(double preco) {
-        this.preco = preco;
+        this.preco = preco;//"seta" o preço do item.
     }
+
     public String getImagem() {
-        return imagem;
+        return imagem;//retorna o caminho da imagem.
     }
+
     public void setImagem(String imagem) {
-        this.imagem = imagem;
+        this.imagem = imagem;//"seta" o caminho da imagem.
     }
+
     public double getDemanda() {
-        return demanda;
+        return demanda;//retorna a demanda do item.
     }
+
     public void setDemanda(double demanda) {
-        this.demanda = demanda;
+        this.demanda = demanda;//"seta" a demanda do item.
+    }
+
+    public void setCategoria(String categoria){
+        this.categoria = categoria;//"seta" a categoria do item.
+    }
+
+    public String getCategoria(){
+        return categoria;//retorna a categoria.
     }
     
     //To String
