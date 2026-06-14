@@ -57,6 +57,14 @@ public class Produto {
         this.imagem = imagem;//"seta" o caminho da imagem.
     }
 
+    public void setQuantidade(int quantidade){
+        this.quantidade = quantidade;
+    }
+
+    public int getQuantidade(){
+        return this.quantidade;
+    }
+
     public double getDemanda() {
         return demanda;//retorna a demanda do item.
     }
