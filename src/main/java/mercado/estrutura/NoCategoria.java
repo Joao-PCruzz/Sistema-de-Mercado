@@ -6,12 +6,14 @@ public class NoCategoria {
 
     private String nomeCategoria; //Nome da categoria
     private NoCategoria proxCategoria; //Proxima categoria 
+    private NoCategoria antCategoria; //Categoria anterior
     private NoProduto  primProduto; //Primeiro produto da categoria
 
     //A princípio um construtor nulo
     public NoCategoria(){
         nomeCategoria = null;
         proxCategoria = null;
+        antCategoria = null;
         primProduto = null;
     }
 
@@ -42,5 +44,17 @@ public class NoCategoria {
     public void setPrimProduto(NoProduto primProduto) {
         this.primProduto = primProduto;
     }
+
+    public NoCategoria getAntCategoria(){
+        return this.antCategoria;
+    }
+
+    public void setAntCategoria(NoCategoria antCategria){
+        this.antCategoria = antCategria;
+    }
     
+    //Checagem se está vazia
+    public boolean estaVazia(){
+        return primProduto == null;
+    }
 }
