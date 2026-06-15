@@ -1,7 +1,6 @@
 package main.java.mercado.service;
 import main.java.mercado.model.Produto;
 import main.java.mercado.estrutura.*;
-import javax.swing.*;
 
 public class ProdutoSevice {
     //Neste arquivo ficarão salvas as alterações que serão feitas no produto.

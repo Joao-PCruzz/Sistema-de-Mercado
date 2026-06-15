@@ -1,6 +1,5 @@
 package main.java.mercado.model;
 
-import javax.swing.*;//aqui só serve para mexer na parte das imagens dos produtos.
 
 //IMPORTANTES OBSERVAÇÕES:
 
@@ -9,7 +8,6 @@ import javax.swing.*;//aqui só serve para mexer na parte das imagens dos produt
 
 public class Produto {
 
-    private JLabel image;//aqui ele terá a imagem em si.
     private String nome;
     private double preco;
     private String imagem;//aqui ele terá o caminho da imagem.
@@ -25,9 +23,6 @@ public class Produto {
         this.quantidade = quantidade;
         this.demanda = demanda;
         this.categoria = categoria;
-        ImageIcon img = new ImageIcon(imagem);//vai atrás da imagem no caminho descrito.
-        this.image = new JLabel(img);//cria o Jlabel com a imagem encontrada no caminho.
-
     }
 
     //Getters and Setters
