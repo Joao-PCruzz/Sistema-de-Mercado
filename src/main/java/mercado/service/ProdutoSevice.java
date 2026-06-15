@@ -38,10 +38,10 @@ public class ProdutoSevice {
     public NoProduto buscarProduto(NoCategoria categoria, String nomeProduto){
         //Caso 1: Categoria vazia/sem produtos
         if(categoria.estaVazia()){
-            System.out.println("A categoria esta vazia, nao existem produtos para bsucar.");
+            System.out.println("A categoria esta vazia, nao existem produtos para buscar.");
             return null;
         }
-        //Caso 2: Exsitem produtos na categoria
+        //Caso 2: Existem produtos na categoria
         else{
             //Nós auxiliares para percorrer a lista
             NoProduto inicio = categoria.getPrimProduto();
@@ -88,7 +88,9 @@ public class ProdutoSevice {
             }
             //Se não for o único na lista
             else{
+                //Pega o anterior e coloca para apontar para o próximo do removido
                 removido.getAnterior().setProximo(removido.getProximo());
+                //Se a categoria removida for a primeira
                 removido.getProximo().setAnterior(removido.getAnterior());
                 //Se o produto removido for o primeiro
                 if(removido == inicio){
@@ -156,5 +158,10 @@ public class ProdutoSevice {
                 System.out.println(aux.getProduto());
             }
         }
+    }
+
+    // == Método para listar produtos ==
+    public void listarProdutos(){
+        
     }
 }
