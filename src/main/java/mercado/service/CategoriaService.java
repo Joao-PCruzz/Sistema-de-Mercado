@@ -9,7 +9,7 @@ public class CategoriaService {
     public void setPrimCategoria(NoCategoria primCategoria){
         this.primCategoria = primCategoria;
     }
-    public NoCategoria getPrimCategroia(){
+    public NoCategoria getPrimCategoria(){
         return this.primCategoria;
     }
 
