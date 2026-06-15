@@ -1,25 +1,17 @@
 package main.java.mercado.model;
 
-
-//IMPORTANTES OBSERVAÇÕES:
-
-//Cada arquivo da imagem do produto deve ter a seguinte descrição (para poder fazer um espécie de automação depois):
-//imagens/categoria/produto.png.
-
 public class Produto {
 
     private String nome;
     private double preco;
-    private String imagem;//aqui ele terá o caminho da imagem.
     private int quantidade;
     private double demanda;
     private String categoria;//"setar" a categoria para poder navegar melhpr depois.
 
     //Construtor da clase
-    public Produto(String nome, double preco, String imagem, int quantidade, double demanda, String categoria) {
+    public Produto(String nome, double preco, int quantidade, double demanda, String categoria) {
         this.nome = nome;
         this.preco = preco;
-        this.imagem = imagem;
         this.quantidade = quantidade;
         this.demanda = demanda;
         this.categoria = categoria;
@@ -42,14 +34,6 @@ public class Produto {
 
     public void setPreco(double preco) {
         this.preco = preco;//"seta" o preço do item.
-    }
-
-    public String getImagem() {
-        return imagem;//retorna o caminho da imagem.
-    }
-
-    public void setImagem(String imagem) {
-        this.imagem = imagem;//"seta" o caminho da imagem.
     }
 
     public void setQuantidade(int quantidade){
@@ -79,6 +63,6 @@ public class Produto {
     //To String
     @Override
     public String toString(){
-        return String.format("%s (R$ %.2f) - Qtd: %d | Demanda: %d", nome, preco, quantidade, demanda);
+        return String.format("%s (R$ %.2f) - Qtd: %d | Demanda: %.2f", nome, preco, quantidade, demanda);
     }
 }
