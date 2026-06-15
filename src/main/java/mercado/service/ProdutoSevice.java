@@ -159,8 +159,26 @@ public class ProdutoSevice {
         }
     }
 
-    // == Método para listar produtos ==
-    public void listarProdutos(){
-        
+    // == Método para listar produtos de uma categoria ==
+    public void listarProdutos(NoCategoria categoria) {
+        //Validação se a categoria foi passada corretamente
+        if (categoria == null) {
+            System.out.println("Categoria inválida ou não informada.");
+            return;
+        }
+        //Se a categoria não possui produtos
+        if (categoria.estaVazia()) {
+            System.out.println("A categoria '" + categoria.getNomeCategoria() + "' está vazia.");
+            return;
+        }
+        System.out.println("--- PRODUTOS DA CATEGORIA: " + categoria.getNomeCategoria().toUpperCase() + " ---");
+        NoProduto inicio = categoria.getPrimProduto();
+        NoProduto atual = inicio;
+        do {
+            //Imprime as informações do produto formatadas pelo toString() da classe Produto
+            System.out.println("- " + atual.getProduto());
+            atual = atual.getProximo();
+        } while (atual != inicio); //Condição de parada da sublista circular
+        System.out.println("--------------------------------------------------\n");
     }
 }

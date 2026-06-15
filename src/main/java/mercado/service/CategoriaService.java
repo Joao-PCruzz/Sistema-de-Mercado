@@ -110,7 +110,21 @@ public class CategoriaService {
     }
 
     // == Méotodo para listar categorias ==
-    public void listarCategorias(){
-
+    public void listarCategorias() {
+        //Caso não existam categorias cadastradas
+        if (primCategoria == null) {
+            System.out.println("Nenhuma categoria cadastrada no sistema.");
+            return;
+        }
+        System.out.println("\n--- LISTA DE CATEGORIAS ---");
+        //Nó auxilair para viajar pelas categorias
+        NoCategoria atual = primCategoria;
+        int contador = 1;
+        do {
+            System.out.println(contador + ". " + atual.getNomeCategoria());
+            atual = atual.getProxCategoria();
+            contador++;
+        } while (atual != primCategoria); //Condição de parada da lista
+        System.out.println("---------------------------");
     }
 }
