@@ -6,7 +6,7 @@ public class Produto {
     private double preco;
     private int quantidade;
     private double demanda;
-    private String categoria;//"setar" a categoria para poder navegar melhpr depois.
+    private String categoria;//"setar" a categoria para poder navegar melhor depois.
 
     //Construtor da clase
     public Produto(String nome, double preco, int quantidade, double demanda, String categoria) {
