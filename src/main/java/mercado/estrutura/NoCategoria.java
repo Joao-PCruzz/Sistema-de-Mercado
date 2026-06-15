@@ -16,6 +16,18 @@ public class NoCategoria {
         antCategoria = null;
         primProduto = null;
     }
+    //Consturtor somente com o nome da categoria para servir de apoio no cadastro
+    public NoCategoria(String nomeCategoria, NoCategoria proxCategoria, NoCategoria antCategoria){
+        this.nomeCategoria = nomeCategoria;
+        this.proxCategoria = proxCategoria;
+        this.antCategoria = antCategoria;
+        primProduto = null; 
+    }
+    public NoCategoria(String nomeCategoria){
+        this.nomeCategoria = nomeCategoria;
+        proxCategoria = antCategoria = null;
+        primProduto = null;
+    }
 
 
 
