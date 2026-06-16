@@ -40,6 +40,22 @@ public class CategoriaService {
         }
     }
 
+    // == Método para inserir categoria na frente de outra ==
+    public void inserirCategoriaApos(String nome, NoCategoria ref) {
+        if (primCategoria == null || ref == null) {
+            cadastrarCategoria(nome);
+        } else {
+            NoCategoria novaCategoria = new NoCategoria(nome);
+            // configura os ponteiros da nova categoria
+            novaCategoria.setProxCategoria(ref.getProxCategoria());
+            novaCategoria.setAntCategoria(ref);
+            // ajusta a categoria posterior e a categoria de referência
+            ref.getProxCategoria().setAntCategoria(novaCategoria);
+            ref.setProxCategoria(novaCategoria);
+            System.out.println("Categoria adicionada na frente de " + ref.getNomeCategoria() + ": " + nome);
+        }
+    }
+
     // == Método para buscar categoria
     public NoCategoria buscarCategoria(String nomeCategoria){
         //Caso 1: Não existem categorias cadastradas
