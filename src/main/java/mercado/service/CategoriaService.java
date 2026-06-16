@@ -96,7 +96,6 @@ public class CategoriaService {
             removido = buscarCategoria(nomeCategoria);
             //Se não encontrou a categoria
             if(removido == null){
-                //Talvez esse print fique duplicado, nos testes irei observar isso e talvez remover essa linha
                 System.out.println("A categoria não foi encontrada para remoção ");
                 return null;
             }
@@ -133,7 +132,7 @@ public class CategoriaService {
             return;
         }
         System.out.println("\n--- LISTA DE CATEGORIAS ---");
-        //Nó auxilair para viajar pelas categorias
+        //Nó auxiliar para viajar pelas categorias
         NoCategoria atual = primCategoria;
         int contador = 1;
         do {
