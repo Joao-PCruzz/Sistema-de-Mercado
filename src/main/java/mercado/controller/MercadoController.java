@@ -2,6 +2,7 @@ package main.java.mercado.controller;
 
 import javax.swing.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import main.java.mercado.estrutura.NoCategoria;
 import main.java.mercado.estrutura.NoProduto;
 import main.java.mercado.model.Produto;
@@ -247,7 +248,8 @@ public class MercadoController {
         if (!file.exists())
             return;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader br = new BufferedReader(
+                new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
             String linha;
             while ((linha = br.readLine()) != null) {
                 String[] partes = linha.split("\\|");
@@ -268,7 +270,8 @@ public class MercadoController {
     }
 
     private void salvarDados() {
-        try (PrintWriter out = new PrintWriter(new FileWriter("dados_mercado.txt"))) {
+        try (PrintWriter out = new PrintWriter(
+                new OutputStreamWriter(new FileOutputStream("dados_mercado.txt"), StandardCharsets.UTF_8))) {
             NoCategoria catAtual = categoriaService.getPrimCategoria();
             if (catAtual != null) {
                 NoCategoria c = catAtual;
