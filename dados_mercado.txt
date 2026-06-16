@@ -1,0 +1,21 @@
+C|Eletrônicos
+P|JBL GO 4|200.0|120|85.0|Eletrônicos
+P|Samsung Galaxy S25|4000.0|45|92.0|Eletrônicos
+P|Smart TV LG 55 4K|2500.0|30|88.5|Eletrônicos
+P|Notebook Dell Inspiron|3500.0|25|75.0|Eletrônicos
+P|Kindle Paperwhite|650.0|80|82.0|Eletrônicos
+C|Alimentação
+P|Café em pó 500g|20.0|250|94.0|Alimentação
+P|Pacote de Arroz 5kg|30.0|500|99.0|Alimentação
+P|Feijão Carioca 1kg|8.5|400|97.5|Alimentação
+P|Azeite de Oliva 500ml|45.0|150|80.0|Alimentação
+P|Leite Integral 1L|5.0|600|98.0|Alimentação
+C|Vestuário
+P|Camiseta Básica Algodão|49.9|200|70.0|Vestuário
+P|Calça Jeans Masculina|120.0|85|65.0|Vestuário
+P|Tênis de Corrida Nike|350.0|40|89.0|Vestuário
+P|Jaqueta Corta Vento|150.0|60|60.0|Vestuário
+C|Casa e Decoração
+P|Jogo de Cama Casal|89.9|50|72.0|Casa e Decoração
+P|Lâmpada LED 9W|9.0|350|85.0|Casa e Decoração
+P|Travesseiro Viscoelástico|60.0|90|78.0|Casa e Decoração
