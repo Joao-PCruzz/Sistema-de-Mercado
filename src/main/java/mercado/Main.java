@@ -4,6 +4,14 @@ import javax.swing.*;
 import main.java.mercado.controller.MercadoController;
 import main.java.mercado.ui.MenuPrincipalUI;
 
+/*
+ Componentes do Grupo G7:
+ 1- Alan Cristian de Jesus Dias;
+ 2- Breno de Jesus Silva;
+ 3- João Pedro Costa Cruz;
+ 4- Wagner Kauê Martins dos Santos.
+*/
+
 public class Main {
     public static void main(String[] args) {
         //configura a janela
