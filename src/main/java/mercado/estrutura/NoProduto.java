@@ -46,6 +46,6 @@ public class NoProduto {
     }
     @Override
     public String toString() {
-        return "NoProduto [proximo -> " + proximo + ", anterior -> " + anterior + ", produto=" + produto + "]";
+        return "NoProduto [produto=" + produto + "]";
     }
 }
