@@ -1,4 +1,5 @@
 package main.java.mercado.service;
+
 import main.java.mercado.model.Produto;
 import main.java.mercado.estrutura.*;
 
@@ -33,7 +34,24 @@ public class ProdutoSevice {
         }
     }
 
-    // == Lógica para Buscar produtos == 
+    // == Lógica para inserir produto na frente de outro ==
+    public void inserirProdutoApos(NoCategoria categoria, NoProduto ref, Produto produto) {
+        NoProduto inicio = categoria.getPrimProduto();
+        if (inicio == null || ref == null) {
+            cadastrarProduto(categoria, produto);
+        } else {
+            NoProduto novoNo = new NoProduto(null, null, produto);
+            //configura os ponteiros do novo produto
+            novoNo.setProximo(ref.getProximo());
+            novoNo.setAnterior(ref);
+            //ajusta o produto posterior e o de referência
+            ref.getProximo().setAnterior(novoNo);
+            ref.setProximo(novoNo);
+            System.out.println("Produto adicionado na frente de " + ref.getProduto().getNome() + ": " + produto.getNome());
+        }
+    }
+
+    // == Lógica para Buscar produtos ==
     public NoProduto buscarProduto(NoCategoria categoria, String nomeProduto){
         //Caso 1: Categoria vazia/sem produtos
         if(categoria.estaVazia()){
@@ -132,7 +150,7 @@ public class ProdutoSevice {
     }
 
     // == Método para alterar Quantidade ==
-    public void alterarQauntidade(NoCategoria categoria, String nome, int quantidade){
+    public void alterarQuantidade(NoCategoria categoria, String nome, int quantidade){
         //Se a categoria não possui produtos
         if(categoria.estaVazia()){
             System.out.println("A categoria esta vazia.");
