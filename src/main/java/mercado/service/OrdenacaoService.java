@@ -7,7 +7,8 @@ public class OrdenacaoService {
     //Essa classe será responsável por fazer as ordenações no projeto
 
     // == Método principal de Ordenação ==
-    //O dono do mercado escolhe a categoria e o critério (1 para Alfabética, 2 e 3 para Preço, 4 e 5 para quantidade, 6 e 7 para demanda)
+    //O dono do mercado escolhe a categoria e o critério (1 para Alfabética, 2 e 3 para Preço, 
+    // 4 e 5 para quantidade, 6 e 7 para demanda)
     public void ordenarProdutos(NoCategoria categoria, int criterio) {
         //Validações iniciais
         if (categoria == null || categoria.estaVazia()) {
