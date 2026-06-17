@@ -69,8 +69,7 @@ Sistema-de-Mercado/
 ---
 
 ## ✒️ Autores
-
-1- Alan Cristian de Jesus Dias;
-2- Aldey Breno de Melo Morais;
-3- João Pedro Costa Cruz;
-4- Wagner Kauê Martins dos Santos.
+* 1-Alan Cristian de Jesus Dias;
+* 2-Aldey Breno de Melo Morais;
+* 3-João Pedro Costa Cruz;
+* 4-Wagner Kauê Martins dos Santos.
