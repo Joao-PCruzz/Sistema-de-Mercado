@@ -37,7 +37,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
     * Importe a pasta raiz do projeto na sua IDE de preferência.
     * Certifique se de que a JDK instalada está configurada no projeto.
 3. **Execute o sistema**
-    Localize a classe principal (provavelmente dentro de src/main/java/mercado/) e execute o método main.
+    * Localize a classe principal (provavelmente dentro de src/main/java/mercado/) e execute o método main.
 
 ---
 
