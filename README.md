@@ -35,7 +35,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
    git clone [https://github.com/seu-usuario/Sistema-de-Mercado.git](https://github.com/seu-usuario/Sistema-de-Mercado.git)
 2. **Abra o projeto na sua IDE**
     * Importe a pasta raiz do projeto na sua IDE de preferência.
-    * Certifique-se de que a JDK instalada está configurada no projeto.
+    * Certifique se de que a JDK instalada está configurada no projeto.
 3. **Execute o sistema**
     Localize a classe principal (provavelmente dentro de src/main/java/mercado/) e execute o método main.
 
@@ -43,24 +43,26 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 
 ## 📁 Estrutura de Pastas
 Sistema-de-Mercado/
-├── src/main/java/mercado/           
-│                 └── controller/               # Pasta resposável por guardar o "controlador" do marcado
-│                 |    └──MercadoController.java 
-│                 └── estrutura/                # Pasta responsável pela estrutura de listas dupla. encadeada circulares e multilistas
-|                 |    ├──NoCategoria.java
-|                 |    └──NoProduto.java  
-│                 └── model/                    # Pasta responsável por definir os produtos
-|                 |    └──Produto.java
-|                 └──service/                   # Pasta responsável pelas funções do sistema 
-|                 |    ├──CategoriaService.java
-|                 |    ├──OrdenacaoService.java
-|                 |    ├──ProdutoService.java
-|                 |    └──RelatorioService.java
-|                 └──ui/                        # Pasta resoinsável pelo front-end
-|                 |   └── # Será abstraida aqui
-|                 └──Main                       # Classe responsável por rodar o programa            
-├── dados_mercado.txt             # Arquivo onde os dados são salvos
-└── .gitignore                    # Arquivos ignorados pelo Git 
+├── src/
+│   └── main/
+│       └── java/
+│           └── mercado/
+│               ├── controller/            # Controlador do mercado
+│               │   └── MercadoController.java
+│               ├── estrutura/             # Estrutura de listas duplas encadeadas circulares e multilistas
+│               │   ├── NoCategoria.java
+│               │   └── NoProduto.java
+│               ├── model/                 # Definição e modelo dos produtos
+│               │   └── Produto.java
+│               ├── service/               # Funções e regras de negócio do sistema
+│               │   ├── CategoriaService.java
+│               │   ├── OrdenacaoService.java
+│               │   ├── ProdutoService.java
+│               │   └── RelatorioService.java
+│               ├── ui/                    # Front-end / Interface do usuário (abstraído)
+│               └── Main.java              # Classe principal responsável por rodar o programa
+├── dados_mercado.txt                      # Arquivo onde os dados são salvos
+└── .gitignore                             # Arquivos ignorados pelo Git 
 ---
 
 ## ✒️ Autores
