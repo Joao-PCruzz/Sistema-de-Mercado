@@ -42,6 +42,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 ---
 
 ## 📁 Estrutura de Pastas
+```text
 Sistema-de-Mercado/
 ├── src/
 │   └── main/
@@ -63,6 +64,8 @@ Sistema-de-Mercado/
 │               └── Main.java              # Classe principal responsável por rodar o programa
 ├── dados_mercado.txt                      # Arquivo onde os dados são salvos
 └── .gitignore                             # Arquivos ignorados pelo Git 
+```
+
 ---
 
 ## ✒️ Autores
